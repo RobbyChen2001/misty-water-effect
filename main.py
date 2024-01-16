@@ -27,8 +27,8 @@ def read_im(filename, colour):
     Returns:
         (np.ndarray): image of shape
     """
-    # TODO: replace with your implementation
-    return None
+    img = cv2.imread(filename, colour)
+    return img
 
 
 def write_im(filename, image):
@@ -38,8 +38,7 @@ def write_im(filename, image):
         filename (str): path to write to
         image (np.ndarray): image to be written
     """
-    # TODO: replace with your implementation
-    pass
+    cv2.imwrite(filename, image)
 
 def read_burst(dir, filetype, colour):
     """Read in all of the .jpg or .png images in a directory
